@@ -1,0 +1,71 @@
+/* Diseño sencillo y adaptable para los dos formularios. */
+:root {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    color: #18221f;
+    background: #f4f6f3;
+}
+* { box-sizing: border-box; }
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 28px 16px;
+    background:
+        radial-gradient(circle at 10% 12%, #e0e9df 0, transparent 33%),
+        radial-gradient(circle at 94% 87%, #e2ebe5 0, transparent 36%),
+        #f4f6f3;
+}
+.tarjeta {
+    width: min(100%, 450px);
+    background: #fff;
+    padding: 38px;
+    border: 1px solid #e7ebe7;
+    border-radius: 18px;
+    box-shadow: 0 20px 55px rgba(27, 46, 34, .07);
+}
+.marca { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; color: #264b37; margin-bottom: 40px; }
+.marca-icono { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 9px; background: #194e37; color: #fff; }
+.eyebrow { font-size: 11px; letter-spacing: 2px; font-weight: 750; color: #41745b; margin: 0 0 9px; }
+h1 { font-size: clamp(26px, 5vw, 31px); letter-spacing: -.9px; line-height: 1.15; margin: 0 0 9px; }
+.descripcion { color: #6a756f; font-size: 14px; margin: 0 0 28px; }
+label { display: block; font-size: 13px; font-weight: 650; margin-bottom: 8px; }
+input {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    margin-bottom: 19px;
+    background: #fff;
+    color: #18221f;
+    border: 1px solid #d9e1da;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color .2s, box-shadow .2s;
+}
+input:focus { border-color: #376d4f; box-shadow: 0 0 0 3px rgba(54, 113, 79, .13); }
+input::placeholder { color: #9aa59d; }
+button {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    padding: 14px;
+    color: white;
+    background: #20563b;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .2s, transform .2s;
+}
+button:hover { background: #143d2a; }
+button:active { transform: scale(.99); }
+.pie { color: #6a756f; text-align: center; margin: 23px 0 0; font-size: 13px; }
+a { color: #215c3d; font-weight: 700; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.alerta { border-radius: 10px; padding: 13px 14px; margin-bottom: 22px; font-size: 13px; line-height: 1.5; }
+.alerta a { display: block; margin-top: 8px; }
+.alerta.error { background: #fff0ee; color: #a4352e; border: 1px solid #f6cfca; }
+.alerta.exito { background: #edf8f0; color: #256142; border: 1px solid #cde6d5; }
+@media (max-width: 480px) { .tarjeta { padding: 27px 22px; } .marca { margin-bottom: 30px; } }
